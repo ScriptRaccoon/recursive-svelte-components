@@ -11,15 +11,19 @@
 <div class="container">
 	{#if depth > 0}
 		<div class="box">
+			<!-- The component renders itself! -->
 			<Binary depth={depth - 1} />
 		</div>
 		<div class="box">
+			<!-- The component renders itself! -->
 			<Binary depth={depth - 1} />
 		</div>
 		<div class="box">
+			<!-- The component renders itself! -->
 			<Binary depth={depth - 1} />
 		</div>
 		<div class="box">
+			<!-- The component renders itself! -->
 			<Binary depth={depth - 1} />
 		</div>
 	{:else if depth === 0}

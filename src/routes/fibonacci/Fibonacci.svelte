@@ -10,6 +10,7 @@
 {#if index === 1}
 	<div class="block"></div>
 {:else if index >= 2}
+	<!-- The component renders itself! -->
 	<Fibonacci index={index - 1} />
 	<Fibonacci index={index - 2} />
 {/if}

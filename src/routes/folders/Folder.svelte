@@ -1,17 +1,17 @@
 <script lang="ts">
-	import Fa from "svelte-fa"
-	import { faFolderClosed, faFolderOpen } from "@fortawesome/free-regular-svg-icons"
+	import Fa from 'svelte-fa';
+	import { faFolderClosed, faFolderOpen } from '@fortawesome/free-regular-svg-icons';
 
-	import File from "./File.svelte"
-	import Folder from "./Folder.svelte"
-	import type { FolderData } from "./types"
+	import File from './File.svelte';
+	import Folder from './Folder.svelte';
+	import type { FolderData } from './types';
 
 	type Props = {
-		folder: FolderData
-		open?: boolean
-	}
+		folder: FolderData;
+		open?: boolean;
+	};
 
-	let { folder, open = false }: Props = $props()
+	let { folder, open = false }: Props = $props();
 </script>
 
 <div class="folder">
@@ -26,6 +26,7 @@
 		<ul class="contents">
 			{#each folder.subfolders as subfolder}
 				<li>
+					<!-- The component renders itself! -->
 					<Folder folder={subfolder} />
 				</li>
 			{/each}
