@@ -1,7 +1,17 @@
 <script lang="ts">
+	import './app.css';
 	import Nav from '$lib/Nav.svelte';
 </script>
 
 <Nav />
 
-<slot />
+<main>
+	<slot />
+</main>
+
+<style>
+	main {
+		max-width: 50rem;
+		margin: 0 auto;
+	}
+</style>

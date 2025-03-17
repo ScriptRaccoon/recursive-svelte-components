@@ -17,3 +17,17 @@
 		</li>
 	</ul>
 </nav>
+
+<style>
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	nav {
+		margin-block: 1.5rem;
+		font-size: 1.25rem;
+	}
+</style>
