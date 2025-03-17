@@ -1,7 +1,15 @@
+<script>
+	import { faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { faHome } from '@fortawesome/free-solid-svg-icons';
+	import Fa from 'svelte-fa';
+</script>
+
 <nav>
 	<ul>
 		<li>
-			<a href="/">Home</a>
+			<a href="/" aria-label="Home">
+				<Fa icon={faHome} />
+			</a>
 		</li>
 		<li>
 			<a href="/folders">Folders and Files</a>
@@ -14,6 +22,15 @@
 		</li>
 		<li>
 			<a href="/tiling">Binary Tiling</a>
+		</li>
+		<li>
+			<a
+				href="https://github.com/ScriptRaccoon/recursive-svelte-components/"
+				target="_blank"
+				aria-label="GitHub"
+			>
+				<Fa icon={faGithub} />
+			</a>
 		</li>
 	</ul>
 </nav>
