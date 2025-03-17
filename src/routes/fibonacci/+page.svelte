@@ -27,21 +27,9 @@
 
 <style>
 	.wrapper {
-		margin-inline: 2rem;
-		margin-block: 1rem 2rem;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem;
-	}
-
-	.wrapper :global(.block) {
-		width: 2rem;
-		height: 2rem;
-		background-color: steelblue;
-		border-radius: 0.5rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
+		margin-top: 1rem;
 	}
 </style>

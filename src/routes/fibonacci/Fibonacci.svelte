@@ -17,6 +17,12 @@
 
 <style>
 	.block {
-		background-color: skyblue;
+		width: 2rem;
+		height: 2rem;
+		background-color: #555;
+		border-radius: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

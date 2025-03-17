@@ -24,14 +24,13 @@
 
 <style>
 	.grid {
-		width: 100%;
-		height: 100%;
+		aspect-ratio: 1;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
 	}
 
 	.filled {
-		background-color: rgb(144, 107, 217);
+		background-color: skyblue;
 	}
 </style>
