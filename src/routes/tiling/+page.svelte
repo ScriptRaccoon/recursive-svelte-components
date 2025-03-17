@@ -5,7 +5,7 @@
 	let depth = $state(4);
 </script>
 
-<h1>Binary tiling</h1>
+<h1>Binary Tiling</h1>
 
 <RangeInput bind:value={depth} min={0} max={6} label="depth of binary tiling" />
 

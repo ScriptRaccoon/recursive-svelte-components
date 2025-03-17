@@ -3,7 +3,7 @@
 	import Folder from './Folder.svelte';
 </script>
 
-<h1>Folders and files</h1>
+<h1>Folders and Files</h1>
 
 <p>Open the folder and its subfolders.</p>
 

@@ -17,7 +17,7 @@
 	});
 </script>
 
-<h1>Fibonacci sequence</h1>
+<h1>Fibonacci Sequence</h1>
 
 <RangeInput bind:value={fiboIndex} label="index for fibonacci sequence" min={0} max={12} />
 
