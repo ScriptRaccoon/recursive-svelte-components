@@ -46,6 +46,5 @@
 
 	nav {
 		margin-block: 1.5rem;
-		font-size: 1.25rem;
 	}
 </style>
