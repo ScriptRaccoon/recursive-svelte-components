@@ -13,5 +13,6 @@
 	main {
 		max-width: 50rem;
 		margin: 0 auto;
+		padding-inline: 1rem;
 	}
 </style>
