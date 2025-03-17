@@ -1,0 +1,35 @@
+<script lang="ts">
+	import Carpet from './Carpet.svelte';
+
+	type Props = {
+		depth: number;
+	};
+
+	let { depth }: Props = $props();
+</script>
+
+<div class="grid">
+	{#each { length: 3 } as _, i}
+		{#each { length: 3 } as _, j}
+			<div class:filled={i === 1 && j === 1}>
+				{#if (i !== 1 || j !== 1) && depth > 0}
+					<Carpet depth={depth - 1} />
+				{/if}
+			</div>
+		{/each}
+	{/each}
+</div>
+
+<style>
+	.grid {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	.filled {
+		background-color: rgb(144, 107, 217);
+	}
+</style>
