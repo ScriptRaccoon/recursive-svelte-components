@@ -2,26 +2,28 @@
 	import { faGithub } from '@fortawesome/free-brands-svg-icons'
 	import { faHome } from '@fortawesome/free-solid-svg-icons'
 	import Fa from 'svelte-fa'
+	import { page } from '$app/state'
+	import Link from './Link.svelte'
 </script>
 
 <nav>
 	<ul>
 		<li>
+			<Link path="/folders" name="Folders and Files" />
+		</li>
+		<li>
+			<Link path="/carpet" name="Sierpinski Carpet" />
+		</li>
+		<li>
+			<Link path="/fibonacci" name="Fibonacci Sequence" />
+		</li>
+		<li>
+			<Link path="/tiling" name="Binary Tiling" />
+		</li>
+		<li>
 			<a href="/" aria-label="Home">
 				<Fa icon={faHome} />
 			</a>
-		</li>
-		<li>
-			<a href="/folders">Folders and Files</a>
-		</li>
-		<li>
-			<a href="/carpet">Sierpinski Carpet</a>
-		</li>
-		<li>
-			<a href="/fibonacci">Fibonacci Sequence</a>
-		</li>
-		<li>
-			<a href="/tiling">Binary Tiling</a>
 		</li>
 		<li>
 			<a
