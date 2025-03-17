@@ -5,13 +5,12 @@
 
 <h1>Folders and files</h1>
 
-<div class="wrapper">
-	<Folder folder={sampleFolder} />
-</div>
+<p>Open the folder and its subfolders.</p>
+
+<Folder folder={sampleFolder} />
 
 <style>
-	.wrapper {
-		display: flex;
-		justify-content: center;
+	p {
+		margin-bottom: 1.5rem;
 	}
 </style>

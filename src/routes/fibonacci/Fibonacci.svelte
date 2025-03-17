@@ -16,6 +16,6 @@
 
 <style>
 	.block {
-		background-color: steelblue;
+		background-color: skyblue;
 	}
 </style>
