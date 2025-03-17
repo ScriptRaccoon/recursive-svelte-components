@@ -11,8 +11,9 @@
 <div class="grid">
 	{#each { length: 3 } as _, i}
 		{#each { length: 3 } as _, j}
-			<div class:filled={i === 1 && j === 1}>
-				{#if (i !== 1 || j !== 1) && depth > 0}
+			{@const isCenter = i === 1 && j === 1}
+			<div class:filled={isCenter}>
+				{#if !isCenter && depth > 0}
 					<!-- The component renders itself! -->
 					<Carpet depth={depth - 1} />
 				{/if}
