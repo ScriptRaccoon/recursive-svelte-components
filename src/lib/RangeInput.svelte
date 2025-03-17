@@ -1,12 +1,12 @@
 <script lang="ts">
 	type Props = {
-		value: number;
-		label: string;
-		min: number;
-		max: number;
-	};
+		value: number
+		label: string
+		min: number
+		max: number
+	}
 
-	let { value = $bindable(), label, min, max }: Props = $props();
+	let { value = $bindable(), label, min, max }: Props = $props()
 </script>
 
 <div>

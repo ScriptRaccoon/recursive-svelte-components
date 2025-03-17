@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Binary from './Binary.svelte';
+	import Binary from './Binary.svelte'
 
 	type Props = {
-		depth: number;
-	};
+		depth: number
+	}
 
-	let { depth }: Props = $props();
+	let { depth }: Props = $props()
 </script>
 
 <div class="container">

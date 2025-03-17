@@ -1,6 +1,6 @@
 <script lang="ts">
-	import sampleFolder from './sample.json';
-	import Folder from './Folder.svelte';
+	import sampleFolder from './sample.json'
+	import Folder from './Folder.svelte'
 </script>
 
 <h1>Folders and Files</h1>

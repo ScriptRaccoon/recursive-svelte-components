@@ -1,1 +1,166 @@
-{"name": "/", "subfolders": [{"name": "projects", "subfolders": [{"name": "project_alpha", "subfolders": [{"name": "src", "subfolders": [{"name": "components", "subfolders": [], "files": [{"name": "header", "extension": "ts"}, {"name": "footer", "extension": "ts"}]}, {"name": "services", "subfolders": [], "files": [{"name": "api", "extension": "ts"}, {"name": "auth", "extension": "ts"}]}], "files": [{"name": "main", "extension": "ts"}, {"name": "utils", "extension": "ts"}]}, {"name": "tests", "subfolders": [{"name": "unit", "subfolders": [], "files": [{"name": "main.test", "extension": "ts"}, {"name": "utils.test", "extension": "ts"}]}, {"name": "integration", "subfolders": [], "files": [{"name": "api.test", "extension": "ts"}]}], "files": []}], "files": [{"name": "README", "extension": "md"}, {"name": "CHANGELOG", "extension": "md"}]}, {"name": "project_beta", "subfolders": [{"name": "docs", "subfolders": [{"name": "design", "subfolders": [], "files": [{"name": "wireframes", "extension": "pdf"}, {"name": "mockups", "extension": "pdf"}]}, {"name": "requirements", "subfolders": [], "files": [{"name": "specification", "extension": "pdf"}, {"name": "user_stories", "extension": "docx"}]}], "files": []}], "files": [{"name": "index", "extension": "html"}, {"name": "style", "extension": "css"}]}], "files": [{"name": "overview", "extension": "pptx"}, {"name": "roadmap", "extension": "xlsx"}]}, {"name": "media", "subfolders": [{"name": "images", "subfolders": [{"name": "icons", "subfolders": [], "files": [{"name": "favicon", "extension": "ico"}, {"name": "sprite", "extension": "svg"}]}], "files": [{"name": "logo", "extension": "png"}, {"name": "banner", "extension": "jpg"}]}, {"name": "videos", "subfolders": [{"name": "tutorials", "subfolders": [], "files": [{"name": "setup", "extension": "mp4"}, {"name": "deployment", "extension": "mp4"}]}], "files": [{"name": "intro", "extension": "mp4"}]}], "files": [{"name": "media_overview", "extension": "txt"}, {"name": "credits", "extension": "md"}]}], "files": [{"name": "config", "extension": "json"}, {"name": "LICENSE", "extension": "md"}, {"name": "README", "extension": "md"}]}
+{
+	"name": "/",
+	"subfolders": [
+		{
+			"name": "projects",
+			"subfolders": [
+				{
+					"name": "project_alpha",
+					"subfolders": [
+						{
+							"name": "src",
+							"subfolders": [
+								{
+									"name": "components",
+									"subfolders": [],
+									"files": [
+										{ "name": "header", "extension": "ts" },
+										{ "name": "footer", "extension": "ts" }
+									]
+								},
+								{
+									"name": "services",
+									"subfolders": [],
+									"files": [
+										{ "name": "api", "extension": "ts" },
+										{ "name": "auth", "extension": "ts" }
+									]
+								}
+							],
+							"files": [
+								{ "name": "main", "extension": "ts" },
+								{ "name": "utils", "extension": "ts" }
+							]
+						},
+						{
+							"name": "tests",
+							"subfolders": [
+								{
+									"name": "unit",
+									"subfolders": [],
+									"files": [
+										{
+											"name": "main.test",
+											"extension": "ts"
+										},
+										{
+											"name": "utils.test",
+											"extension": "ts"
+										}
+									]
+								},
+								{
+									"name": "integration",
+									"subfolders": [],
+									"files": [
+										{
+											"name": "api.test",
+											"extension": "ts"
+										}
+									]
+								}
+							],
+							"files": []
+						}
+					],
+					"files": [
+						{ "name": "README", "extension": "md" },
+						{ "name": "CHANGELOG", "extension": "md" }
+					]
+				},
+				{
+					"name": "project_beta",
+					"subfolders": [
+						{
+							"name": "docs",
+							"subfolders": [
+								{
+									"name": "design",
+									"subfolders": [],
+									"files": [
+										{
+											"name": "wireframes",
+											"extension": "pdf"
+										},
+										{
+											"name": "mockups",
+											"extension": "pdf"
+										}
+									]
+								},
+								{
+									"name": "requirements",
+									"subfolders": [],
+									"files": [
+										{
+											"name": "specification",
+											"extension": "pdf"
+										},
+										{
+											"name": "user_stories",
+											"extension": "docx"
+										}
+									]
+								}
+							],
+							"files": []
+						}
+					],
+					"files": [
+						{ "name": "index", "extension": "html" },
+						{ "name": "style", "extension": "css" }
+					]
+				}
+			],
+			"files": [
+				{ "name": "overview", "extension": "pptx" },
+				{ "name": "roadmap", "extension": "xlsx" }
+			]
+		},
+		{
+			"name": "media",
+			"subfolders": [
+				{
+					"name": "images",
+					"subfolders": [
+						{
+							"name": "icons",
+							"subfolders": [],
+							"files": [
+								{ "name": "favicon", "extension": "ico" },
+								{ "name": "sprite", "extension": "svg" }
+							]
+						}
+					],
+					"files": [
+						{ "name": "logo", "extension": "png" },
+						{ "name": "banner", "extension": "jpg" }
+					]
+				},
+				{
+					"name": "videos",
+					"subfolders": [
+						{
+							"name": "tutorials",
+							"subfolders": [],
+							"files": [
+								{ "name": "setup", "extension": "mp4" },
+								{ "name": "deployment", "extension": "mp4" }
+							]
+						}
+					],
+					"files": [{ "name": "intro", "extension": "mp4" }]
+				}
+			],
+			"files": [
+				{ "name": "media_overview", "extension": "txt" },
+				{ "name": "credits", "extension": "md" }
+			]
+		}
+	],
+	"files": [
+		{ "name": "config", "extension": "json" },
+		{ "name": "LICENSE", "extension": "md" },
+		{ "name": "README", "extension": "md" }
+	]
+}

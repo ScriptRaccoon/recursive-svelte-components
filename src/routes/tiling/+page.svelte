@@ -1,8 +1,8 @@
 <script>
-	import RangeInput from '$lib/RangeInput.svelte';
-	import Binary from './Binary.svelte';
+	import RangeInput from '$lib/RangeInput.svelte'
+	import Binary from './Binary.svelte'
 
-	let depth = $state(4);
+	let depth = $state(4)
 </script>
 
 <h1>Binary Tiling</h1>

@@ -1,8 +1,8 @@
 <script>
-	import Carpet from './Carpet.svelte';
-	import RangeInput from '$lib/RangeInput.svelte';
+	import Carpet from './Carpet.svelte'
+	import RangeInput from '$lib/RangeInput.svelte'
 
-	let depth = $state(2);
+	let depth = $state(2)
 </script>
 
 <h1>Sierpinski Carpet</h1>

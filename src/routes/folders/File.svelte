@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Fa from 'svelte-fa';
-	import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
+	import Fa from 'svelte-fa'
+	import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 
-	import type { FileData } from './types';
+	import type { FileData } from './types'
 
 	type Props = {
-		file: FileData;
-	};
+		file: FileData
+	}
 
-	let { file }: Props = $props();
+	let { file }: Props = $props()
 </script>
 
 <div>

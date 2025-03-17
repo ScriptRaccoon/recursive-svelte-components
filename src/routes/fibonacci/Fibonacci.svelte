@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Fibonacci from './Fibonacci.svelte';
+	import Fibonacci from './Fibonacci.svelte'
 	type Props = {
-		index: number;
-	};
+		index: number
+	}
 
-	let { index }: Props = $props();
+	let { index }: Props = $props()
 </script>
 
 {#if index === 1}

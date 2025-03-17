@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Carpet from './Carpet.svelte';
+	import Carpet from './Carpet.svelte'
 
 	type Props = {
-		depth: number;
-	};
+		depth: number
+	}
 
-	let { depth }: Props = $props();
+	let { depth }: Props = $props()
 </script>
 
 <div class="grid">
