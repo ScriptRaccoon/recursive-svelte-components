@@ -34,7 +34,7 @@
 <style>
 	.block {
 		position: absolute;
-		background-image: linear-gradient(skyblue, white);
+		background-image: var(--gradient);
 		width: calc(1px * var(--size));
 		aspect-ratio: 1;
 	}

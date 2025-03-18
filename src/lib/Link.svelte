@@ -28,6 +28,6 @@
 	}
 
 	.link.active {
-		color: yellow;
+		background-color: mediumorchid;
 	}
 </style>

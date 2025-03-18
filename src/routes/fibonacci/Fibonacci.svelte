@@ -17,10 +17,12 @@
 
 <style>
 	.block {
-		width: 2rem;
-		height: 2rem;
-		background-color: #555;
+		width: 3rem;
+		aspect-ratio: 1;
 		border-radius: 0.5rem;
+		background-image: var(--gradient);
+		color: black;
+		font-size: 1.5rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;

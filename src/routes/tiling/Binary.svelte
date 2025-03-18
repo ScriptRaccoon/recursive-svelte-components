@@ -43,7 +43,7 @@
 	}
 
 	.box {
-		background-color: skyblue;
+		background-image: var(--gradient);
 	}
 
 	.box.full {

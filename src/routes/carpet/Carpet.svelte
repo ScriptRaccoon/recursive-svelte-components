@@ -31,6 +31,6 @@
 	}
 
 	.filled {
-		background-color: skyblue;
+		background-image: var(--gradient);
 	}
 </style>
