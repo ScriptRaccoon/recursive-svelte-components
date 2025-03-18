@@ -5,36 +5,34 @@
 		size: number
 		offset: number
 		depth: number
+		rotation?: number
 	}
 
-	let { size, offset, depth }: Props = $props()
+	let { size, offset, depth, rotation = 0 }: Props = $props()
 
 	let next_size = $derived(size * Math.sqrt(offset ** 2 + (1 - offset) ** 2))
 	let angle = $derived(-(180 / Math.PI) * Math.atan(offset / (1 - offset)))
 </script>
 
 {#if depth >= 0}
-	<div class="square" style:--size="{size}px" style:--angle="{angle}deg">
-		<div class="transformer">
-			<Square size={next_size} {offset} depth={depth - 1} />
-		</div>
+	<div
+		class="square"
+		style:--size="{size}px"
+		style:--rotation="{rotation}deg"
+	>
+		<!-- The component renders itself! -->
+		<Square size={next_size} {offset} depth={depth - 1} rotation={angle} />
 	</div>
 {/if}
 
 <style>
 	.square {
-		position: absolute;
 		outline: 2px solid white;
 		width: var(--size);
 		aspect-ratio: 1;
-	}
-
-	.transformer {
-		position: absolute;
-		inset: 0;
+		rotate: var(--rotation);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		rotate: var(--angle);
 	}
 </style>
