@@ -13,7 +13,7 @@
 </script>
 
 {#if depth >= 0}
-	<div class="block" style:--size={size} style:--angle={angle}>
+	<div class="block" style:--size="{size}px" style:--angle="{angle}deg">
 		<div class="left">
 			<!-- The component renders itself! -->
 			<Block
@@ -22,7 +22,10 @@
 				{angle}
 			/>
 		</div>
-		<div class="right" style:--smaller-size={size * Math.sin(unit * angle)}>
+		<div
+			class="right"
+			style:--smaller-size="{size * Math.sin(unit * angle)}px"
+		>
 			<!-- The component renders itself! -->
 			<Block
 				depth={depth - 1}
@@ -37,7 +40,7 @@
 	.block {
 		position: absolute;
 		background-image: var(--gradient);
-		width: calc(1px * var(--size));
+		width: var(--size);
 		aspect-ratio: 1;
 	}
 
@@ -48,12 +51,12 @@
 	}
 
 	.left {
-		transform: rotate(calc(1deg * var(--angle)));
+		transform: rotate(var(--angle));
 	}
 
 	.right {
 		right: 0;
-		transform: translateX(calc(-1px * var(--smaller-size)));
-		rotate: calc(1deg * (var(--angle) - 90));
+		transform: translateX(calc(-1 * var(--smaller-size)));
+		rotate: calc(var(--angle) - 90deg);
 	}
 </style>
