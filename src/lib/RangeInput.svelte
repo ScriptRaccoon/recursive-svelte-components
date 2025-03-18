@@ -12,7 +12,7 @@
 <div>
 	<label>
 		<input type="range" bind:value {min} {max} aria-label={label} />
-		<span aria-hidden={true}>
+		<span aria-hidden={true} class="value">
 			{value}
 		</span>
 	</label>
@@ -32,5 +32,9 @@
 
 	input {
 		accent-color: yellow;
+	}
+
+	.value {
+		width: 2ch;
 	}
 </style>
