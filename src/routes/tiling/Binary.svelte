@@ -10,22 +10,12 @@
 
 <div class="container">
 	{#if depth > 0}
-		<div class="box">
-			<!-- The component renders itself! -->
-			<Binary depth={depth - 1} />
-		</div>
-		<div class="box">
-			<!-- The component renders itself! -->
-			<Binary depth={depth - 1} />
-		</div>
-		<div class="box">
-			<!-- The component renders itself! -->
-			<Binary depth={depth - 1} />
-		</div>
-		<div class="box">
-			<!-- The component renders itself! -->
-			<Binary depth={depth - 1} />
-		</div>
+		{#each { length: 4 } as _}
+			<div class="box">
+				<!-- The component renders itself! -->
+				<Binary depth={depth - 1} />
+			</div>
+		{/each}
 	{:else if depth === 0}
 		<div class="box full"></div>
 	{/if}
@@ -33,11 +23,10 @@
 
 <style>
 	.container {
-		width: 100%;
-		height: 100%;
+		aspect-ratio: 1;
 		display: grid;
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 0.25rem;
 		background-color: #000;
 	}
