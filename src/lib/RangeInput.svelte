@@ -4,14 +4,15 @@
 		label: string
 		min: number
 		max: number
+		step?: number
 	}
 
-	let { value = $bindable(), label, min, max }: Props = $props()
+	let { value = $bindable(), label, min, max, step = 1 }: Props = $props()
 </script>
 
 <div>
 	<label>
-		<input type="range" bind:value {min} {max} aria-label={label} />
+		<input type="range" bind:value {min} {max} {step} aria-label={label} />
 		<span aria-hidden={true} class="value">
 			{value}
 		</span>
