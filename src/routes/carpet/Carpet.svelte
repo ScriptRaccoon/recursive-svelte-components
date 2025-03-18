@@ -8,19 +8,21 @@
 	let { depth }: Props = $props()
 </script>
 
-<div class="grid">
-	{#each { length: 3 } as _, i}
-		{#each { length: 3 } as _, j}
-			{@const isCenter = i === 1 && j === 1}
-			<div class:filled={isCenter}>
-				{#if !isCenter && depth > 0}
-					<!-- The component renders itself! -->
-					<Carpet depth={depth - 1} />
-				{/if}
-			</div>
+{#if depth >= 0}
+	<div class="grid">
+		{#each { length: 3 } as _, i}
+			{#each { length: 3 } as _, j}
+				{@const isCenter = i === 1 && j === 1}
+				<div class:filled={isCenter}>
+					{#if !isCenter}
+						<!-- The component renders itself! -->
+						<Carpet depth={depth - 1} />
+					{/if}
+				</div>
+			{/each}
 		{/each}
-	{/each}
-</div>
+	</div>
+{/if}
 
 <style>
 	.grid {

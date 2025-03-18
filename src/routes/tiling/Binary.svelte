@@ -8,21 +8,21 @@
 	let { depth }: Props = $props()
 </script>
 
-<div class="container">
-	{#if depth > 0}
+{#if depth > 0}
+	<div class="grid">
 		{#each { length: 4 } as _}
 			<div class="box">
 				<!-- The component renders itself! -->
 				<Binary depth={depth - 1} />
 			</div>
 		{/each}
-	{:else if depth === 0}
-		<div class="box full"></div>
-	{/if}
-</div>
+	</div>
+{:else if depth === 0}
+	<div class="box"></div>
+{/if}
 
 <style>
-	.container {
+	.grid {
 		aspect-ratio: 1;
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
@@ -33,10 +33,6 @@
 
 	.box {
 		background-image: var(--gradient);
-	}
-
-	.box.full {
-		grid-row: 1 / span 2;
-		grid-column: 1 / span 2;
+		aspect-ratio: 1;
 	}
 </style>
