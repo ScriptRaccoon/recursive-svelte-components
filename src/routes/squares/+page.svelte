@@ -1,0 +1,27 @@
+<script>
+	import { browser } from '$app/environment'
+	import RangeInput from '$lib/RangeInput.svelte'
+	import Square from './Square.svelte'
+
+	let depth = $state(30)
+	let offset = $state(0.1)
+
+	const initial_size = browser ? Math.min(window.innerWidth - 100, 600) : 200
+</script>
+
+<h1>Inscribed Squares</h1>
+
+<RangeInput bind:value={depth} min={0} max={30} label="depth" />
+<RangeInput bind:value={offset} min={0} max={1} step={0.05} label="offset" />
+
+<div class="wrapper">
+	<Square {offset} size={initial_size} {depth} />
+</div>
+
+<style>
+	.wrapper {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+	}
+</style>

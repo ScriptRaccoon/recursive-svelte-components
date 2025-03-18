@@ -23,6 +23,9 @@
 			<Link path="/tree" name="Pythagorean Tree" />
 		</li>
 		<li>
+			<Link path="/squares" name="Inscribed Squares" />
+		</li>
+		<li>
 			<a href="/" aria-label="Home">
 				<Fa icon={faHome} />
 			</a>
@@ -45,10 +48,11 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 0.25rem 1rem;
+		gap: 0.5rem 1rem;
 	}
 
 	nav {
+		padding-inline: 0.5rem;
 		margin-block: 1.5rem;
 	}
 </style>
