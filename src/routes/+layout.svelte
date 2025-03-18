@@ -3,6 +3,10 @@
 	import Nav from '$lib/Nav.svelte'
 </script>
 
+<svelte:head>
+	<title>Recursive Svelte components</title>
+</svelte:head>
+
 <Nav />
 
 <main>
