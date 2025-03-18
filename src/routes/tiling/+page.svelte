@@ -7,7 +7,7 @@
 
 <h1>Binary Tiling</h1>
 
-<RangeInput bind:value={depth} min={0} max={6} label="depth of binary tiling" />
+<RangeInput bind:value={depth} min={0} max={8} label="depth of binary tiling" />
 
 <div class="wrapper">
 	<Binary {depth} />

@@ -10,10 +10,11 @@
 
 {#if depth > 0}
 	<div class="grid">
-		{#each { length: 4 } as _}
+		{#each { length: 4 } as _, i}
 			<div class="box">
-				<!-- The component renders itself! -->
-				<Binary depth={depth - 1} />
+				{#if i <= 2}
+					<Binary depth={depth - 1} />
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -27,7 +28,7 @@
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-columns: repeat(2, 1fr);
-		gap: 0.25rem;
+		gap: 2px;
 		background-color: #000;
 	}
 
