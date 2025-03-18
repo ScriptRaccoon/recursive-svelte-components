@@ -8,9 +8,3 @@
 <p>Open the folder and its subfolders.</p>
 
 <Folder folder={sampleFolder} />
-
-<style>
-	p {
-		margin-bottom: 1.5rem;
-	}
-</style>

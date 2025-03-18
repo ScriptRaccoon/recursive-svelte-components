@@ -32,7 +32,7 @@
 		</li>
 		<li>
 			<a
-				href="https://github.com/ScriptRaccoon/recursive-svelte-components/"
+				href="https://github.com/ScriptRaccoon/recursive-svelte-components"
 				target="_blank"
 				aria-label="GitHub"
 			>
