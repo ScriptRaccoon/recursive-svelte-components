@@ -26,3 +26,8 @@ h1 {
 	margin-block: 1rem;
 	font-weight: 500;
 }
+
+input[type='checkbox'],
+input[type='range'] {
+	accent-color: yellow;
+}
