@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Fibonacci from './Fibonacci.svelte'
+
 	type Props = {
 		index: number
 	}

@@ -15,6 +15,7 @@
 {#if depth >= 0}
 	<div class="block" style:--size={size} style:--angle={angle}>
 		<div class="left">
+			<!-- The component renders itself! -->
 			<Block
 				depth={depth - 1}
 				size={size * Math.cos(unit * angle)}
@@ -22,6 +23,7 @@
 			/>
 		</div>
 		<div class="right" style:--smaller-size={size * Math.sin(unit * angle)}>
+			<!-- The component renders itself! -->
 			<Block
 				depth={depth - 1}
 				size={size * Math.sin(unit * angle)}

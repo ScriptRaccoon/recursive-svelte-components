@@ -2,7 +2,6 @@
 	import { faGithub } from '@fortawesome/free-brands-svg-icons'
 	import { faHome } from '@fortawesome/free-solid-svg-icons'
 	import Fa from 'svelte-fa'
-	import { page } from '$app/state'
 	import Link from './Link.svelte'
 </script>
 
