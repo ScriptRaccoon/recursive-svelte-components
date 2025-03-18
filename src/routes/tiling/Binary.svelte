@@ -9,7 +9,7 @@
 </script>
 
 {#if depth > 0}
-	<div class="grid">
+	<div class="grid" style:--depth={depth}>
 		{#each { length: 4 } as _, i}
 			<div class="box">
 				{#if i <= 2}
@@ -28,8 +28,8 @@
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-columns: repeat(2, 1fr);
-		gap: 2px;
-		background-color: #000;
+		gap: calc(0.5 * var(--depth) * 1px);
+		background-color: black;
 	}
 
 	.box {
