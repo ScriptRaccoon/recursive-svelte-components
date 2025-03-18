@@ -21,6 +21,9 @@
 			<Link path="/tiling" name="Binary Tiling" />
 		</li>
 		<li>
+			<Link path="/tree" name="Pythagorean Tree" />
+		</li>
+		<li>
 			<a href="/" aria-label="Home">
 				<Fa icon={faHome} />
 			</a>
