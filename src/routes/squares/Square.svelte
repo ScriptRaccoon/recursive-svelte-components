@@ -5,23 +5,30 @@
 		size: number
 		offset: number
 		depth: number
+		unbounded_depth: boolean
 		rotation?: number
 	}
 
-	let { size, offset, depth, rotation = 0 }: Props = $props()
+	let { size, offset, depth, unbounded_depth, rotation = 0 }: Props = $props()
 
 	let next_size = $derived(size * Math.sqrt(offset ** 2 + (1 - offset) ** 2))
 	let angle = $derived(-(180 / Math.PI) * Math.atan(offset / (1 - offset)))
 </script>
 
-{#if depth >= 0}
+{#if depth >= 0 || (unbounded_depth && size >= 1)}
 	<div
 		class="square"
 		style:--size="{size}px"
 		style:--rotation="{rotation}deg"
 	>
 		<!-- The component renders itself! -->
-		<Square size={next_size} {offset} depth={depth - 1} rotation={angle} />
+		<Square
+			size={next_size}
+			{offset}
+			depth={depth - 1}
+			rotation={angle}
+			{unbounded_depth}
+		/>
 	</div>
 {/if}
 
