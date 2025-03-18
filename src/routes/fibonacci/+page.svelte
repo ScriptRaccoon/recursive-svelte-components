@@ -32,9 +32,9 @@
 
 <style>
 	.wrapper {
+		margin-top: 2rem;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem;
-		margin-top: 1rem;
 	}
 </style>

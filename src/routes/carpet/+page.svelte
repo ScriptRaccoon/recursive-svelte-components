@@ -15,8 +15,6 @@
 
 <style>
 	.wrapper {
-		width: 100%;
-		aspect-ratio: 1;
-		padding-top: 1rem;
+		margin-top: 1rem;
 	}
 </style>

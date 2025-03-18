@@ -15,7 +15,7 @@
 
 <style>
 	.wrapper {
-		margin-top: 1rem;
+		margin-top: 2rem;
 		width: min(90vw, 500px);
 		aspect-ratio: 1;
 		margin-inline: auto;
