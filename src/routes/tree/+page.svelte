@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
+	import CheckInput from '$lib/CheckInput.svelte'
 	import RangeInput from '$lib/RangeInput.svelte'
 	import Tree from './Tree.svelte'
 
@@ -12,11 +13,7 @@
 
 <h1>Pythagorean Tree</h1>
 
-<label>
-	<span>Unbounded Depth</span>
-	<input type="checkbox" bind:checked={unbounded_depth} />
-</label>
-
+<CheckInput label="Unbounded Depth" bind:checked={unbounded_depth} />
 <RangeInput bind:value={angle} label="angle" min={0} max={90} />
 <RangeInput bind:value={maxDepth} label="depth" min={0} max={12} />
 
@@ -29,12 +26,5 @@
 		margin-top: 2rem;
 		display: flex;
 		justify-content: center;
-	}
-
-	label {
-		display: flex;
-		justify-content: center;
-		font-size: 1rem;
-		gap: 0.5rem;
 	}
 </style>

@@ -1,5 +1,6 @@
 <script>
 	import { browser } from '$app/environment'
+	import CheckInput from '$lib/CheckInput.svelte'
 	import RangeInput from '$lib/RangeInput.svelte'
 	import Square from './Square.svelte'
 
@@ -13,11 +14,7 @@
 
 <h1>Inscribed Squares</h1>
 
-<label>
-	<span>Unbounded Depth</span>
-	<input type="checkbox" bind:checked={unbounded_depth} />
-</label>
-
+<CheckInput label="Unbounded Depth" bind:checked={unbounded_depth} />
 <RangeInput bind:value={maxDepth} min={0} max={30} label="maximal depth" />
 <RangeInput bind:value={offset} min={0} max={1} step={0.05} label="offset" />
 
@@ -30,12 +27,5 @@
 		margin-top: 2rem;
 		display: flex;
 		justify-content: center;
-	}
-
-	label {
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-		font-size: 1rem;
 	}
 </style>
