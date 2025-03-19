@@ -4,18 +4,24 @@
 	type Props = {
 		size: number
 		offset: number
-		depth: number
+		maxDepth: number
 		unbounded_depth: boolean
 		rotation?: number
 	}
 
-	let { size, offset, depth, unbounded_depth, rotation = 0 }: Props = $props()
+	let {
+		size,
+		offset,
+		maxDepth,
+		unbounded_depth,
+		rotation = 0,
+	}: Props = $props()
 
 	let next_size = $derived(size * Math.sqrt(offset ** 2 + (1 - offset) ** 2))
 	let angle = $derived(-(180 / Math.PI) * Math.atan(offset / (1 - offset)))
 </script>
 
-{#if depth >= 0 || (unbounded_depth && size >= 1)}
+{#if maxDepth >= 0 || (unbounded_depth && size >= 1)}
 	<div
 		class="square"
 		style:--size="{size}px"
@@ -25,7 +31,7 @@
 		<Square
 			size={next_size}
 			{offset}
-			depth={depth - 1}
+			maxDepth={maxDepth - 1}
 			rotation={angle}
 			{unbounded_depth}
 		/>

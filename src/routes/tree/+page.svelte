@@ -4,7 +4,7 @@
 	import Block from './Block.svelte'
 
 	let angle = $state(30)
-	let depth = $state(10)
+	let maxDepth = $state(10)
 
 	const size = browser ? window.innerWidth / 12 : 100
 </script>
@@ -12,10 +12,10 @@
 <h1>Pythagorean Tree</h1>
 
 <RangeInput bind:value={angle} label="angle" min={0} max={90} />
-<RangeInput bind:value={depth} label="depth" min={0} max={12} />
+<RangeInput bind:value={maxDepth} label="depth" min={0} max={12} />
 
 <div class="wrapper">
-	<Block {depth} {size} {angle} />
+	<Block {maxDepth} {size} {angle} />
 </div>
 
 <style>

@@ -2,22 +2,22 @@
 	import Block from './Block.svelte'
 
 	type Props = {
-		depth: number
+		maxDepth: number
 		angle: number
 		size: number
 	}
 
 	const unit = Math.PI / 180
 
-	let { depth, size, angle }: Props = $props()
+	let { maxDepth, size, angle }: Props = $props()
 </script>
 
-{#if depth >= 0}
+{#if maxDepth >= 0}
 	<div class="block" style:--size="{size}px" style:--angle="{angle}deg">
 		<div class="left">
 			<!-- The component renders itself! -->
 			<Block
-				depth={depth - 1}
+				maxDepth={maxDepth - 1}
 				size={size * Math.cos(unit * angle)}
 				{angle}
 			/>
@@ -28,7 +28,7 @@
 		>
 			<!-- The component renders itself! -->
 			<Block
-				depth={depth - 1}
+				maxDepth={maxDepth - 1}
 				size={size * Math.sin(unit * angle)}
 				{angle}
 			/>

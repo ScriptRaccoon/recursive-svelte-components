@@ -3,7 +3,7 @@
 	import RangeInput from '$lib/RangeInput.svelte'
 	import Square from './Square.svelte'
 
-	let depth = $state(30)
+	let maxDepth = $state(30)
 	let offset = $state(0.1)
 
 	const initial_size = browser ? Math.min(window.innerWidth - 100, 600) : 200
@@ -18,11 +18,11 @@
 	<input type="checkbox" bind:checked={unbounded_depth} />
 </label>
 
-<RangeInput bind:value={depth} min={0} max={30} label="depth" />
+<RangeInput bind:value={maxDepth} min={0} max={30} label="maximal depth" />
 <RangeInput bind:value={offset} min={0} max={1} step={0.05} label="offset" />
 
 <div class="wrapper">
-	<Square {offset} size={initial_size} {depth} {unbounded_depth} />
+	<Square {offset} size={initial_size} {maxDepth} {unbounded_depth} />
 </div>
 
 <style>

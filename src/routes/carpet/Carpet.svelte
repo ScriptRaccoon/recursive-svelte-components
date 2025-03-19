@@ -2,13 +2,13 @@
 	import Carpet from './Carpet.svelte'
 
 	type Props = {
-		depth: number
+		maxDepth: number
 	}
 
-	let { depth }: Props = $props()
+	let { maxDepth }: Props = $props()
 </script>
 
-{#if depth >= 0}
+{#if maxDepth >= 0}
 	<div class="grid">
 		{#each { length: 3 } as _, i}
 			{#each { length: 3 } as _, j}
@@ -16,7 +16,7 @@
 				<div class:filled={isCenter}>
 					{#if !isCenter}
 						<!-- The component renders itself! -->
-						<Carpet depth={depth - 1} />
+						<Carpet maxDepth={maxDepth - 1} />
 					{/if}
 				</div>
 			{/each}

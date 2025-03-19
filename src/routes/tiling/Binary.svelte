@@ -2,23 +2,23 @@
 	import Binary from './Binary.svelte'
 
 	type Props = {
-		depth: number
+		maxDepth: number
 	}
 
-	let { depth }: Props = $props()
+	let { maxDepth }: Props = $props()
 </script>
 
-{#if depth > 0}
-	<div class="grid" style:--depth={depth}>
+{#if maxDepth > 0}
+	<div class="grid" style:--maxdepth={maxDepth}>
 		{#each { length: 4 } as _, i}
 			<div class="box">
 				{#if i <= 2}
-					<Binary depth={depth - 1} />
+					<Binary maxDepth={maxDepth - 1} />
 				{/if}
 			</div>
 		{/each}
 	</div>
-{:else if depth === 0}
+{:else if maxDepth === 0}
 	<div class="box"></div>
 {/if}
 
@@ -28,7 +28,7 @@
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-columns: repeat(2, 1fr);
-		gap: calc(0.5 * var(--depth) * 1px);
+		gap: calc(0.5 * var(--maxdepth) * 1px);
 		background-color: black;
 	}
 

@@ -2,15 +2,20 @@
 	import RangeInput from '$lib/RangeInput.svelte'
 	import Binary from './Binary.svelte'
 
-	let depth = $state(6)
+	let maxDepth = $state(6)
 </script>
 
 <h1>Binary Tiling</h1>
 
-<RangeInput bind:value={depth} min={0} max={8} label="depth of binary tiling" />
+<RangeInput
+	bind:value={maxDepth}
+	min={0}
+	max={8}
+	label="maximal depth of binary tiling"
+/>
 
 <div class="wrapper">
-	<Binary {depth} />
+	<Binary {maxDepth} />
 </div>
 
 <style>
