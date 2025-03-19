@@ -26,6 +26,9 @@
 			<Link path="/squares" name="Inscribed Squares" />
 		</li>
 		<li>
+			<Link path="/snowflake" name="Koch Snowflake" />
+		</li>
+		<li>
 			<a href="/" aria-label="Home">
 				<Fa icon={faHome} />
 			</a>
