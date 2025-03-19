@@ -6,19 +6,17 @@
 
 <p>
 	This page features some examples of recursive Svelte components, i.e.,
-	components that render themselves (with different props to avoid infinite
-	loops).
+	components that render themselves. For more details how this is done, check
+	out the corresponding <a
+		href="https://scriptraccoon.dev/blog/recursive-svelte-components"
+		target="_blank">blog post</a
+	>.
 </p>
 
 <p>
-	Notice that you don't need to use <code>{sample}</code> anymore to do that. Just
-	import the component in its own file and use it.
-</p>
-
-<p>
-	Every drawing here is done with CSS alone, no canvas is being used. You may
-	check out the source code on <a
+	The code can be found on
+	<a
 		href="https://github.com/ScriptRaccoon/recursive-svelte-components"
 		target="_blank">GitHub</a
-	> to see how it's done.
+	>.
 </p>
