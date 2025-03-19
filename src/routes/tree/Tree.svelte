@@ -51,7 +51,7 @@
 	}
 
 	.left {
-		transform: rotate(var(--angle));
+		rotate: var(--angle);
 	}
 
 	.right {
