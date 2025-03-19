@@ -25,6 +25,7 @@ h1 {
 	text-align: center;
 	margin-block: 1rem;
 	font-weight: 500;
+	line-height: 1.2;
 }
 
 input[type='checkbox'],
