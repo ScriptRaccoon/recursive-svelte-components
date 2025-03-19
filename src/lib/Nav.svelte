@@ -28,20 +28,23 @@
 		<li>
 			<Link path="/snowflake" name="Koch Snowflake" />
 		</li>
-		<li>
-			<a href="/" aria-label="Home">
-				<Fa icon={faHome} />
-			</a>
-		</li>
-		<li>
-			<a
-				href="https://github.com/ScriptRaccoon/recursive-svelte-components"
-				target="_blank"
-				aria-label="GitHub"
-			>
-				<Fa icon={faGithub} />
-			</a>
-		</li>
+
+		<div class="special-links">
+			<li>
+				<a href="/" aria-label="Home">
+					<Fa icon={faHome} />
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://github.com/ScriptRaccoon/recursive-svelte-components"
+					target="_blank"
+					aria-label="GitHub"
+				>
+					<Fa icon={faGithub} />
+				</a>
+			</li>
+		</div>
 	</ul>
 </nav>
 
@@ -57,5 +60,26 @@
 	nav {
 		padding-inline: 0.5rem;
 		margin-block: 1.5rem;
+	}
+
+	.special-links {
+		display: flex;
+		gap: 1rem;
+	}
+
+	@media (max-width: 720px) {
+		ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.5rem;
+		}
+
+		ul :global(.link) {
+			display: block;
+		}
+
+		.special-links {
+			justify-content: flex-end;
+		}
 	}
 </style>

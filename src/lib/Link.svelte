@@ -25,6 +25,7 @@
 		border-radius: 0.25rem;
 		text-decoration: none;
 		font-size: 1rem;
+		white-space: nowrap;
 	}
 
 	.link.active {
