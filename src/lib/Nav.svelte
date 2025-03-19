@@ -29,22 +29,24 @@
 			<Link path="/snowflake" name="Koch Snowflake" />
 		</li>
 
-		<div class="special-links">
-			<li>
-				<a href="/" aria-label="Home">
-					<Fa icon={faHome} />
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://github.com/ScriptRaccoon/recursive-svelte-components"
-					target="_blank"
-					aria-label="GitHub"
-				>
-					<Fa icon={faGithub} />
-				</a>
-			</li>
-		</div>
+		<li>
+			<ul class="special-links">
+				<li>
+					<a href="/" aria-label="Home">
+						<Fa icon={faHome} />
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://github.com/ScriptRaccoon/recursive-svelte-components"
+						target="_blank"
+						aria-label="GitHub"
+					>
+						<Fa icon={faGithub} />
+					</a>
+				</li>
+			</ul>
+		</li>
 	</ul>
 </nav>
 
