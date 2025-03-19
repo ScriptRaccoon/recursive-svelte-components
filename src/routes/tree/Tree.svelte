@@ -5,14 +5,15 @@
 		maxDepth: number
 		angle: number
 		size: number
+		unbounded_depth: boolean
 	}
 
 	const unit = Math.PI / 180
 
-	let { maxDepth, size, angle }: Props = $props()
+	let { maxDepth, size, angle, unbounded_depth }: Props = $props()
 </script>
 
-{#if maxDepth >= 0}
+{#if maxDepth >= 0 || (unbounded_depth && size >= 1)}
 	<div class="square" style:--size="{size}px" style:--angle="{angle}deg">
 		<div class="left">
 			<!-- The component renders itself! -->
@@ -20,6 +21,7 @@
 				maxDepth={maxDepth - 1}
 				size={size * Math.cos(unit * angle)}
 				{angle}
+				{unbounded_depth}
 			/>
 		</div>
 		<div
@@ -31,6 +33,7 @@
 				maxDepth={maxDepth - 1}
 				size={size * Math.sin(unit * angle)}
 				{angle}
+				{unbounded_depth}
 			/>
 		</div>
 	</div>
