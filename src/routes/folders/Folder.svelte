@@ -17,31 +17,29 @@
 	let { folder, open = false }: Props = $props()
 </script>
 
-<div class="folder">
-	<details bind:open>
-		<summary>
-			<span class="icon">
-				<Fa icon={open ? faFolderOpen : faFolderClosed} />
-			</span>
-			{folder.name}
-		</summary>
+<details bind:open>
+	<summary>
+		<span class="icon">
+			<Fa icon={open ? faFolderOpen : faFolderClosed} />
+		</span>
+		{folder.name}
+	</summary>
 
-		<ul class="contents">
-			{#each folder.subfolders as subfolder}
-				<li>
-					<!-- The component renders itself! -->
-					<Folder folder={subfolder} />
-				</li>
-			{/each}
+	<ul>
+		{#each folder.subfolders as subfolder}
+			<li>
+				<!-- The component renders itself! -->
+				<Folder folder={subfolder} />
+			</li>
+		{/each}
 
-			{#each folder.files as file}
-				<li>
-					<File {file} />
-				</li>
-			{/each}
-		</ul>
-	</details>
-</div>
+		{#each folder.files as file}
+			<li>
+				<File {file} />
+			</li>
+		{/each}
+	</ul>
+</details>
 
 <style>
 	summary {
@@ -57,11 +55,8 @@
 		width: 1.25rem;
 	}
 
-	li {
-		list-style: none;
-	}
-
-	.contents {
+	ul {
 		translate: 1.5rem 0;
+		list-style: none;
 	}
 </style>
