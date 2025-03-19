@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
 	import RangeInput from '$lib/RangeInput.svelte'
-	import Block from './Block.svelte'
+	import Block from './Tree.svelte'
 
 	let angle = $state(30)
 	let maxDepth = $state(10)

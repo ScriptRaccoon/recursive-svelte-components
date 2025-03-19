@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Block from './Block.svelte'
+	import Tree from './Tree.svelte'
 
 	type Props = {
 		maxDepth: number
@@ -13,10 +13,10 @@
 </script>
 
 {#if maxDepth >= 0}
-	<div class="block" style:--size="{size}px" style:--angle="{angle}deg">
+	<div class="square" style:--size="{size}px" style:--angle="{angle}deg">
 		<div class="left">
 			<!-- The component renders itself! -->
-			<Block
+			<Tree
 				maxDepth={maxDepth - 1}
 				size={size * Math.cos(unit * angle)}
 				{angle}
@@ -27,7 +27,7 @@
 			style:--smaller-size="{size * Math.sin(unit * angle)}px"
 		>
 			<!-- The component renders itself! -->
-			<Block
+			<Tree
 				maxDepth={maxDepth - 1}
 				size={size * Math.sin(unit * angle)}
 				{angle}
@@ -37,7 +37,7 @@
 {/if}
 
 <style>
-	.block {
+	.square {
 		position: absolute;
 		background-image: var(--gradient);
 		width: var(--size);
