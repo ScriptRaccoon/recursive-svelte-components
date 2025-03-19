@@ -40,7 +40,7 @@
 
 <style>
 	.square {
-		outline: 2px solid white;
+		outline: 0.5px solid white;
 		width: var(--size);
 		aspect-ratio: 1;
 		rotate: var(--rotation);
