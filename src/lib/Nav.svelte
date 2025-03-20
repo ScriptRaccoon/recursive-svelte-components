@@ -20,7 +20,7 @@
 			<Link path="/tiling" name="Binary Tiling" />
 		</li>
 		<li>
-			<Link path="/tree" name="Pythagorean Tree" />
+			<Link path="/pythagoras-tree" name="Pythagoras Tree" />
 		</li>
 		<li>
 			<Link path="/squares" name="Inscribed Squares" />

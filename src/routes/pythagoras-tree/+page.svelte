@@ -11,7 +11,7 @@
 	const size = browser ? window.innerWidth / 12 : 100
 </script>
 
-<h1>Pythagorean Tree</h1>
+<h1>Pythagoras Tree</h1>
 
 <CheckInput label="Unbounded Depth" bind:checked={unbounded_depth} />
 <RangeInput bind:value={angle} label="angle" min={0} max={90} />
