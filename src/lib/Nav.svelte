@@ -20,6 +20,9 @@
 			<Link path="/tiling" name="Binary Tiling" />
 		</li>
 		<li>
+			<Link path="/binary-tree" name="Binary Tree" />
+		</li>
+		<li>
 			<Link path="/pythagoras-tree" name="Pythagoras Tree" />
 		</li>
 		<li>
