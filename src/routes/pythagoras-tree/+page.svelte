@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment'
 	import CheckInput from '$lib/CheckInput.svelte'
 	import RangeInput from '$lib/RangeInput.svelte'
-	import Tree from './Tree.svelte'
+	import PythagorasTree from './PythagorasTree.svelte'
 
 	let angle = $state(30)
 	let maxDepth = $state(10)
@@ -18,7 +18,7 @@
 <RangeInput bind:value={maxDepth} label="depth" min={0} max={12} />
 
 <div class="wrapper">
-	<Tree {maxDepth} {size} {angle} {unbounded_depth} />
+	<PythagorasTree {maxDepth} {size} {angle} {unbounded_depth} />
 </div>
 
 <style>

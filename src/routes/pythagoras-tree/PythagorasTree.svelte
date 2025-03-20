@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Tree from './Tree.svelte'
+	import PythagorasTree from './PythagorasTree.svelte'
 
 	type Props = {
 		maxDepth: number
@@ -17,7 +17,7 @@
 	<div class="square" style:--size="{size}px" style:--angle="{angle}deg">
 		<div class="left">
 			<!-- The component renders itself! -->
-			<Tree
+			<PythagorasTree
 				maxDepth={maxDepth - 1}
 				size={size * Math.cos(unit * angle)}
 				{angle}
@@ -29,7 +29,7 @@
 			style:--smaller-size="{size * Math.sin(unit * angle)}px"
 		>
 			<!-- The component renders itself! -->
-			<Tree
+			<PythagorasTree
 				maxDepth={maxDepth - 1}
 				size={size * Math.sin(unit * angle)}
 				{angle}
