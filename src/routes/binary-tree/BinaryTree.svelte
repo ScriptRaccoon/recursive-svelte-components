@@ -47,6 +47,7 @@
 		transform-origin: top;
 		top: 100%;
 		transition: rotate 100ms ease-out;
+		opacity: 0.95;
 	}
 
 	.branch > :global(*:nth-child(1)) {
