@@ -17,6 +17,7 @@
 		style:--size="{size}px"
 		style:--left-angle="{leftAngle}deg"
 		style:--right-angle="{rightAngle}deg"
+		style:--thickness="{size * 0.05}px"
 	>
 		<BinaryTree
 			maxDepth={maxDepth - 1}
@@ -35,7 +36,7 @@
 
 <style>
 	.branch {
-		width: 1px;
+		width: var(--thickness);
 		height: var(--size);
 		background-color: white;
 		position: relative;
@@ -45,6 +46,7 @@
 		position: absolute;
 		transform-origin: top;
 		top: 100%;
+		transition: rotate 100ms ease-out;
 	}
 
 	.branch > :global(*:nth-child(1)) {
