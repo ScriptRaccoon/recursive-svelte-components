@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Binary from './Binary.svelte'
+	import Tiling from './Tiling.svelte'
 
 	type Props = {
 		maxDepth: number
@@ -13,7 +13,7 @@
 		{#each { length: 4 } as _, i}
 			<div class="box">
 				{#if i <= 2}
-					<Binary maxDepth={maxDepth - 1} />
+					<Tiling maxDepth={maxDepth - 1} />
 				{/if}
 			</div>
 		{/each}

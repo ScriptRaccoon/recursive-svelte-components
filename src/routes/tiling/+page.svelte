@@ -1,6 +1,6 @@
 <script>
 	import RangeInput from '$lib/RangeInput.svelte'
-	import Binary from './Binary.svelte'
+	import Tiling from './Tiling.svelte'
 
 	let maxDepth = $state(6)
 </script>
@@ -15,7 +15,7 @@
 />
 
 <div class="wrapper">
-	<Binary {maxDepth} />
+	<Tiling {maxDepth} />
 </div>
 
 <style>
